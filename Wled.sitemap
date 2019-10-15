@@ -1,0 +1,18 @@
+Text label="MasterBedroom" icon="bedroom"{
+            Group item=MasterBedroom
+            Text label="Bed Room Night Lamp" icon="rgb"{
+                Switch      item=ganesh_strip_wled1
+                Colorpicker item=ganesh_strip_wled_col1 icon="colorwheel"
+                Selection item=ganesh_strip_col1 mappings=[ 60='WHITE',61='SILVER',62='GRAY',63='BLACK',64='RED',65='MAROON',66='YELLOW',67='OLIVE',68='LIME',69='GREEN',70='AQUA',71='TEAL',72='BLUE',73='NAVY',74='FUCHSIA',75='PURPLE' ]
+                Selection item=ganesh_strip_Coloreffects1 mappings=[1010='Solid',1011='Blink',1012='Breathe',1013='Wipe',1014='Wipe_Random',1015='Random_Colors',1016='Sweep',1017='Dynamic',1018='Colorloop',1019='Rainbow',10110='Scan',10111='Dual_Scan',10112='Fade',10113='Chase',10114='Chase_Rainbow',10115='Running',10116='Saw',10117='Twinkle',10118='Dissolve',10119='Dissolve_Rnd',10120='Sparkle',10121='Dark_Sparkle',10122='Sparkle+',10123='Strobe',10124='Strobe_Rainbow',10125='Mega_Strobe',10126='Blink_Rainbow',10127='Android',10128='Chase',10129='Chase_Random',10130='Chase_Rainbow',10131='Chase_Flash',10132='Chase_Flash_Rnd',10133='Rainbow_Runner',10134='Colorful',10135='Traffic_Light',10136='Sweep_Random',10137='Running_2',10138='Red_&_Blue',10139='Stream',10140='Scanner',10141='Lighthouse',10142='Fireworks',10143='Rain',10144='Merry_Christmas',10145='Fire_Flicker',10146='Gradient',10147='Loading',10148='In_Out',10149='In_In',10150='Out_Out',10151='Out_In',10152='Circus',10153='Halloween',10154='Tri_Chase',10155='Tri_Wipe',10156='Tri_Fade',10157='Lightning',10158='ICU',10159='Multi_Comet',10160='Dual_Scanner',10161='Stream_2',10162='Oscillate',10163='Pride_2015',10164='Juggle',10165='Palette',10166='Fire_2012',10167='Colorwaves',10168='BPM',10169='Fill_Noise',10170='Noise_1',10171='Noise_2',10172='Noise_3',10173='Noise_4',10174='Colortwinkle',10175='Lake',10176='Meteor',10177='Smooth_Meteor',10178='Railway',10179='Ripple',10180='TwinkleFox']
+                Selection item=ganesh_strip_ColorPalettes1 mappings=[20001='Default',20002='Random Cycle',20003='Primary color',20004='Based on primary',20005='Set colors',20006='Based on set',20007='Party',20008='Cloud',20009='Lava',20010='Ocean',20011='Forest',20012='Rainbow',20013='Rainbow bands',20014='Sunset',20015='Rivendell',20016='Breeze',20017='Red & Blue',20018='Yellowout',20019='Analoguous',20020='Splash',20021='Pastel',20022='Sunset 2',20023='Beech',20024='Vintage',20025='Departure',20026='Landscape',20027='Beach',20028='Sherbet',20029='Hult',20030='Hult 64',20031='Drywet',20032='Jul',20033='Grintage',20034='Rewhi',20035='Tertiary',20036='Fire',20037='Icefire',20038='Cyane',20039='Light Pink',20040='Autumn',20041='Magenta',20042='Magred',20043='Yelmag',20044='Yelblu',20045='Orange & Teal',20046='Tiamat',20047='April Night',20048='Orangery',20049='C9',20050='Sakura']
+                Slider item=ganesh_strip_wled_dim1 
+                Slider item=ganesh_strip_effect_speed1 
+                Slider item=ganesh_strip_Effect_intensity1      
+            
+           
+            Webview url="http://192.168.1.99:8080/static/Visualization/Timeline.html?Item=ganesh_strip_wled1&ServiceId=rrd4j&Hours=24" height=3 label="Last 24 Hrs Temple" icon="colorlight"
+            
+             Webview url="http://192.168.1.26" height=20  icon="colorlight" //visibility=[temple_light_wled=="ON"] //http://192.168.1.45/
+            }
+        }

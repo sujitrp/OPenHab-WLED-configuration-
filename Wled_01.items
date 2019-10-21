@@ -1,0 +1,8 @@
+Switch ganesh_strip_wled1 "Bed Room Night Light" (gLedstrip) ["Lighting"] {mqtt=">[mqtt:wled/godlight2:command:ON:228],>[mqtt:wled/godlight2:command:OFF:0],<[mqtt:wled/godlight2/g:state:MAP(LEDONOFF.map)]"}
+Dimmer ganesh_strip_wled_dim1 "Bed Room Night Brightness [%d]" (gLedstrip) ["Lighting"] {mqtt=">[mqtt:wled/godlight2:command:*:JS(genscale100-255.js)],<[mqtt:wled/godlight2/g:state:JS(genscale255-100.js)]", autoupdate="true"}
+Color ganesh_strip_wled_col1 "Bed Room Night" (gLedstrip) ["Lighting"] {mqtt=">[mqtt:wled/godlight2/col:command:*:JS(colour.js)],<[mqtt:wled/godlight2/c:state:*:HSBType.fromRGB(temple_light_wled_col.state.toString)]",autoupdate="true"} //temple_light_wled_col.state.toString
+Number ganesh_strip_col1 "Bed Room Night Color" (gLedstrip) {mqtt=">[mqtt:wled/godlight2/col:command:*:MAP(wledColoreffectsJSON.map)]"}
+Number ganesh_strip_Coloreffects1 "Bed Room Night Effects" (gLedstrip) {mqtt=">[mqtt:wled/godlight2/api:command:*:MAP(wledColoreffectsJSON.map)]"}
+Number ganesh_strip_ColorPalettes1 "Bed Room Night Palettes" (gLedstrip) {mqtt=">[mqtt:wled/godlight2/api:command:*:MAP(wledColoreffectsJSON.map)]"}
+Dimmer ganesh_strip_effect_speed1 "Bed Room Night light Speed [%.0f]" (gLedstrip) ["Lighting"] {mqtt=">[mqtt:wled/godlight2/api:command:*:JS(wledspeedscale100-255.js)],<[mqtt:wled/godlight2/api:state:JS(wledspeedscale255-100.js)]", autoupdate="true"}
+Dimmer ganesh_strip_Effect_intensity1 "Bed Room Night light intensity [%.0f]" (gLedstrip) ["Lighting"] {mqtt=">[mqtt:wled/godlight2/api:command:*:JS(wledintensityscale100-255.js)],<[mqtt:wled/godlight2/api:state:JS(wledintensityscale255-100.js)]", autoupdate="true"}
